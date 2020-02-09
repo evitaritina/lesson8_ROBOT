@@ -2,7 +2,8 @@ public class Moon {
 
     int height;
     int width;
-    Robot robot;
+//    Robot robot;
+    Robot robot = new Robot();
 
     public Moon(int height, int width) {
         this.height = height;
@@ -15,18 +16,16 @@ public class Moon {
 
 
     public void moveRobotX(Moon moon, int x) throws Exception {
-        Robot robot = new Robot();
         if (robot.getX() + x < 0 || robot.getX() + x >= moon.height) {
-            throw new Exception("x should be between 0 and < as " + moon.height + " but x is " + x);
+            throw new Exception("x should be between 0 and < as " + moon.height + " but x is " + (robot.getX() + x));
         } else {
             robot.moveX(x);
         }
     }
 
     public void moveRobotY(Moon moon, int y) throws Exception {
-        Robot robot = new Robot();
-        if (robot.getY() + y < 0 || robot.getY() + y >= moon.width) {
-            throw new Exception("y should be between 0 and < as " + moon.width + " but y is " + y);
+         if (robot.getY() + y < 0 || robot.getY() + y >= moon.width) {
+            throw new Exception("y should be between 0 and < as " + moon.width + " but y is " + (robot.getY() + y));
         } else {
             robot.moveY(y);
         }

@@ -31,6 +31,7 @@ public class Robot_test {
     }
 
     //  @Test - nestraadaa :(
+    @Test
     public void testRobotGoXY_HappyPass() throws Exception {
         Moon moon = new Moon(10, 10);
         Robot robot = new Robot();
@@ -39,8 +40,8 @@ public class Robot_test {
         assertEquals("Can't move, out of boundaries", 5, robot.getX());
         moon.moveRobotY(moon, 8);
         assertEquals("Can't move, out of boundaries", 8, robot.getY());
-        moon.moveRobotX(moon, 5);
-        assertEquals("Can't move, out of boundaries", 10, robot.getX());
+        moon.moveRobotX(moon, 4);
+        assertEquals("Can't move, out of boundaries", 9, robot.getX());
     }
 
     @Test
