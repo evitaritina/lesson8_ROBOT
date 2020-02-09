@@ -1,7 +1,7 @@
 public class Robot {
     String name;
 
-    private int x, y;
+    private static int x, y;
 
     public Robot() {
         this.x = 0;
@@ -9,7 +9,7 @@ public class Robot {
     }
 
     public void moveX(int x) {
-        this.x = this.x + x;
+       this.x = this.x + x;
     }
 
     public void moveY(int y) {
@@ -24,5 +24,6 @@ public class Robot {
     public int getY() {
         return y;
     }
+
 
 }
